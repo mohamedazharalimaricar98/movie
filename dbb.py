@@ -16,9 +16,9 @@ def show_all():
 
 	conn.close()
 
-def add_one(Name,Actor,Actress,Director,Year of Release):
+def add_one(Name,Actor,Actress,Director,Year):
 	conn = sqlite3.connect('moviess.db')
 	c = conn.cursor()
-	c.execute("INSERT INTO movie VALUES (?,?,?,?,?)", (Name, Actor, Actress, Director,Year of Release))
+	c.execute("INSERT INTO movie VALUES (?,?,?,?,?)", (Name, Actor, Actress, Director,Year))
 	conn.commit()
 	conn.close()
